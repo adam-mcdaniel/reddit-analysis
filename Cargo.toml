@@ -1,0 +1,31 @@
+[package]
+name = "reddit-analyzer"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[[bin]]
+name = "collect"
+path = "src/bins/collect.rs"
+
+[[bin]]
+name = "analyze"
+path = "src/bins/analyze.rs"
+
+[[bin]]
+name = "graph"
+path = "src/bins/graph.rs"
+
+[dependencies]
+clap = { version = "4.0", features = ["derive"] }
+rayon = "1.6.0"
+serde = "1.0.147"
+serde_json = "1.0.87"
+indicatif = "0.17.2"
+roux = { version = "2.2.3", features = ["blocking"] }
+rust-bert = "0.19.0"
+lazy_static = "1.4.0"
+plotters = "0.3.4"
+# tokio = { version = "1.21.2", features = ["full"] }
+# futures = { version = "0.3.25", features = ["compat", "executor"] }
